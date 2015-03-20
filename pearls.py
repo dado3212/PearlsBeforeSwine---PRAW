@@ -48,7 +48,7 @@ while running:
 
 	curr_hour = datetime.datetime.now(pytz.timezone('US/Eastern')).hour #gets the current 24 hour 
 
-	if (curr_hour == 1 and sent_message != curr_date): #if it's five pm
+	if (curr_hour == 15 and sent_message != curr_date): #if it's three pm
 		matches = 0
 		todays = sub.search('title:"' + start + '"') #and it hasn't been posted
 		for match in todays:

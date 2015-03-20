@@ -13,7 +13,7 @@ logging.captureWarnings(True) #because running 2.7.6
 ## DEFINITION OF VARIABLES ##
 USERNAME = 'Pearls_Bot'
 PASSWORD = 'password'
-USERAGENT = 'Pearls_Bot v1.0 by /u/dado3212'
+USERAGENT = 'Pearls_Bot v1.2 by /u/dado3212'
 
 ## LOGIN ##
 r = praw.Reddit(USERAGENT)
@@ -25,7 +25,7 @@ sub = r.get_subreddit('PearlsBeforeSwine')
 print ''
 print '#####################################################################'
 print '#                                                                   #'
-print '#             		Pearls_Bot v1.0     		            #'
+print '#             		Pearls_Bot v1.2     		            #'
 print '#                    created by /u/dado3212                         #'
 print '#                                                                   #'
 print '#                                                                   #'
@@ -48,13 +48,16 @@ while running:
 
 	curr_hour = datetime.datetime.now(pytz.timezone('US/Eastern')).hour #gets the current 24 hour 
 
-	if (curr_hour == 17 and sent_message != curr_date): #if it's five pm
+	if (curr_hour == 1 and sent_message != curr_date): #if it's five pm
 		matches = 0
 		todays = sub.search('title:"' + start + '"') #and it hasn't been posted
 		for match in todays:
 			matches+=1
 		if (matches == 0): #send a message
-			r.send_message('dado3212','Pearls Post - ' + curr_date,'The current comic has not yet been posted.  \nThe link is [**here**](http://www.gocomics.com/pearlsbeforeswine/' + strftime('%Y/%m/%d') + ').  \nThe posting link is located [**here**](http://www.reddit.com/r/pearlsbeforeswine/submit?title=Pearls%20' + str(dt.month) + '/' + str(dt.day) + '/' + strftime('%y') + '%3A&url=http://www.gocomics.com/pearlsbeforeswine/' + strftime('%Y/%m/%d') + ').')
+			r.send_message('dado3212','Pearls Post - ' + curr_date,('The current comic has not yet been posted.  \n'
+				'The link is [**here**](http://www.gocomics.com/pearlsbeforeswine/' + strftime('%Y/%m/%d') + ').  \n'
+				'The posting link is located [**here**](http://www.reddit.com/r/pearlsbeforeswine/submit?title=Pearls%20' + str(dt.month) + '/' + str(dt.day) + '/' + strftime('%y') + '%3A&url=http://www.gocomics.com/pearlsbeforeswine/' + strftime('%Y/%m/%d') + ').\n\n'
+				'To cross post to /r/comics, the link is [**here**](http://www.reddit.com/r/comics/submit?title=%20-%20Pearls%20Before%20Swine&url=http://www.gocomics.com/pearlsbeforeswine/' + strftime('%Y/%m/%d') + ').'))
 			sent_message = curr_date
 
 	try:

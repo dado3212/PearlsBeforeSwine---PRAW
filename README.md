@@ -13,6 +13,6 @@ Python
 <li>PRAW</li>
 </ul>
 </li>
-<ul>
+</ul>
 
 Created by Alex Beals (c) 2015

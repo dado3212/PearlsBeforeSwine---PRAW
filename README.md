@@ -15,4 +15,4 @@ Python
 </li>
 </ul>
 
-Created by Alex Beals (c) 2015
+**Created by Alex Beals © 2015**

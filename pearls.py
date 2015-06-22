@@ -16,7 +16,7 @@ requests.packages.urllib3.disable_warnings()
 
 ## DEFINITION OF VARIABLES ##
 USERNAME = 'Pearls_Bot'
-PASSWORD = 'access'
+PASSWORD = 'password'
 USERAGENT = 'Pearls_Bot v1.2 by /u/dado3212'
 globalFreq = pickle.load(open( "freq.dat", "rb"))
 

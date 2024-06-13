@@ -1,3 +1,6 @@
+> [!CAUTION]
+> This repository is abandoned. https://github.com/dado3212/pearls-before-swine is the modern version.
+
 # Pearls Before Swine - PRAW
 This is a bot for /r/PearlsBeforeSwine that I designed.
 
